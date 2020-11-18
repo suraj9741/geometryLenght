@@ -22,11 +22,11 @@ public class App
 		input.close();
 		return length;
 	}
-    public static void main( String[] args )
-    {
-        System.out.println( "---------------welcome----------------" );
-        double[] lineLength = new double[2];
-        lineLength[0] = acceptPoint();   
+	public static void main( String[] args )
+	{
+		System.out.println( "---------------welcome----------------" );
+		double[] lineLength = new double[2];
+		lineLength[0] = acceptPoint();   
 		System.out.println("Line lenght : "+lineLength[0]);     
-    }
+	}
 }
