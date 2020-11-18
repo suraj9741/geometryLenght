@@ -8,8 +8,9 @@ import java.util.Scanner;
  */
 public class App 
 {
-	static double acceptPoint() {
-		Scanner input = new Scanner(System.in);
+	static Scanner input = new Scanner(System.in);
+	static double acceptPoint(int i) {
+		System.out.println("Accepting "+(i+1)+" Line co-ordinate point");
 		System.out.println("Enter point X1");
 		int x1=input.nextInt();
 		System.out.println("Enter point Y1");
@@ -19,14 +20,26 @@ public class App
 		System.out.println("Enter point Y2");
 		int y2=input.nextInt();
 		double length=Math.sqrt(Math.pow(x2-x1, 2)+Math.pow(y2-y1, 2));
-		input.close();
 		return length;
 	}
-	public static void main( String[] args )
-	{
+	static void checkLenght() {
+		Double[] lineLength = new Double[2];
+		for(int i=0;i<2;i++) {
+			lineLength[i] = acceptPoint(i);
+		}
+		for(int i=0;i<2;i++) {
+			System.out.println((i+1)+" Line lenght : "+lineLength[i]);			
+		}
+		boolean True = lineLength[0].equals(lineLength[1]);
+		if(True) {
+			System.out.println("1 & 2 lines are equal");
+		}
+		else {
+			System.out.println("1 & 2 lines are not equal");
+		}
+	}
+	public static void main( String[] args )	{
 		System.out.println( "---------------welcome----------------" );
-		double[] lineLength = new double[2];
-		lineLength[0] = acceptPoint();   
-		System.out.println("Line lenght : "+lineLength[0]);     
+		checkLenght();
 	}
 }
