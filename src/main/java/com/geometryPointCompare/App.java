@@ -36,6 +36,15 @@ public class App
 		}
 		else {
 			System.out.println("1 & 2 lines are not equal");
+			checkGreaterLine(lineLength);
+		}
+	}
+	static void checkGreaterLine(Double [] lineLength) {
+		if(lineLength[0]>lineLength[1]) {
+			System.out.println("Line 1 is Grater than Line 2");
+		}
+		else {
+			System.out.println("Line 2 is Grater than Line 1");
 		}
 	}
 	public static void main( String[] args )	{
